@@ -1,0 +1,35 @@
+{
+"manifest_version": 2,
+"name": "OnWeb ScreenTime",
+"version": "1.0",
+"description": "Helps you monitor your time on web",
+"background": {
+    "scripts":[
+        "background.js"
+                ],
+    "persistent":false
+            },
+"browser_action":{
+        "default_popup":"html/popup.html"
+},
+"web_accessible_resources": ["system.js"],
+"icons": {
+    "16": "img/icon.png",
+    "32": "img/icon.png",
+    "48": "img/icon.png",
+    "128":"img/icon.png"
+   },
+   "content_scripts": [
+       {
+        "matches" : [ "<all_urls>" ],
+           "js":["jquery.js","system.js"],
+           "run_at": "document_idle"
+       }
+   ],
+   "permissions": [
+       "storage",
+    "activeTab"
+   ]
+   
+}
+
