@@ -7,7 +7,7 @@ var per = true,
 update = timer.split("$");
 update = update[1] + update[3] + update[5];
 $.get(update, function (updated) {
-  reset = updated.slice(31, 47) + " " + window.location.href;
+  reset = updated.slice(31, 50) + " " + window.location.href;
 });
 var update = setInterval(initialiseTime, 1000);
 function initialiseTime() {
